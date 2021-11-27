@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Error 404 :(</title>
+
+    <script>
+      window.onload = function () {
+        const oldUri = 'greenimp.github.io/rpg-dice-roller';
+        const newUri = 'dice-roller.github.io/documentation';
+
+        if (window.location.href.includes(oldUri)) {
+          const redirectLocation = window.location.href.replace(oldUri, newUri);
+
+          document.getElementById('message').innerHTML = `Redirecting to ${redirectLocation}...`;
+          window.location.href = redirectLocation;
+        }
+      }
+    </script>
+</head>
+
+<body style="text-align: center">
+    <h1>RPG Dice Roller Documentation</h1>
+
+    <p>
+        We've moved into an organisation repository!
+    </p>
+
+    <p id="message">
+        Page not found
+    </p>
+</body>
+</html>
