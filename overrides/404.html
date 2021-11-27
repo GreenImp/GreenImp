@@ -12,21 +12,19 @@
         if (window.location.href.includes(oldUri)) {
           const redirectLocation = window.location.href.replace(oldUri, newUri);
 
-          document.getElementById('message').innerHTML = `Redirecting to ${redirectLocation}...`;
+          document.getElementById('body').innerHTML = `<h1>RPG Dice Roller Documentation</h1>
+
+    <p>We've moved into an organisation repository!</p>
+
+    <p>Redirecting to ${redirectLocation}...</p>`;
           window.location.href = redirectLocation;
         }
       }
     </script>
 </head>
 
-<body style="text-align: center">
-    <h1>RPG Dice Roller Documentation</h1>
-
+<body id="body" style="text-align: center">
     <p>
-        We've moved into an organisation repository!
-    </p>
-
-    <p id="message">
         Page not found
     </p>
 </body>
